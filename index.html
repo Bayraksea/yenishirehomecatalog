@@ -104,3 +104,45 @@
 
 </body>
 </html>
+
+ <div class="place">
+  <div class="place-content">
+    <h2>
+      <a href="https://www.google.com/maps?q=37.642831,31.305098" target="_blank" style="text-decoration: none; color: inherit;">
+        Karagöl 📍
+      </a>
+    </h2>
+    <p>Dedegöl Dağı’nın eteklerinde yer alan Karagöl, benzersiz doğasıyla doğa severlerin uğrak noktasıdır.</p>
+
+    <!-- Glide Slider Başlangıç -->
+    <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="glide__slide"><img src="https://github.com/Bayraksea/yenisardemo/blob/main/karagol2.jpg?raw=true" alt="Karagöl 2"></li>
+          <li class="glide__slide"><img src="https://github.com/Bayraksea/yenisardemo/blob/main/karagol3.jpg?raw=true" alt="Karagöl 3"></li>
+          <li class="glide__slide"><img src="https://github.com/Bayraksea/yenisardemo/blob/main/karagol4.jpg?raw=true" alt="Karagöl 4"></li>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">◀</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">▶</button>
+      </div>
+    </div>
+    <!-- Glide Slider Bitiş -->
+
+    <a href="https://www.google.com/maps?q=37.642831,31.305098" target="_blank" class="map-link">
+      📍 Konumu Görüntüle
+    </a>
+  </div>
+</div>
+
+<script>
+  new Glide('.glide', {
+    type: 'carousel',
+    perView: 1,
+    focusAt: 'center',
+    autoplay: 3000
+  }).mount();
+</script>
+
+    
