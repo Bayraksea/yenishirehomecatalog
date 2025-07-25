@@ -13,6 +13,33 @@
   <title>YenishireHome Turizm Kataloğu</title>
   <style>
 
+.slider-container {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  background: #f1f8e9;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.slider {
+  display: flex;
+  gap: 10px;
+}
+
+.slider img {
+  height: 200px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+}
+
+.slider img:hover {
+  transform: scale(1.05);
+}
+
+    
     header h1 {
     font-family: 'Cinzel Decorative', serif;
     font-weight: 700;
@@ -125,26 +152,18 @@
     📍 Konumu Görüntüle
   </a>
 
-  <!-- 📸 Fotoğraf Galerisi -->
-  <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px;">
-    <a href="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol1.jpg?raw=true" data-lightbox="melikler" data-title="Melikler Yaylası 1">
-      <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol1.jpg?raw=true" alt="Melikler Yaylası 1" style="width: 30%; border-radius: 6px;" />
-    </a>
-    <a href="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol2.jpg?raw=true" data-lightbox="melikler" data-title="Melikler Yaylası 2">
-      <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol2.jpg?raw=true" alt="Melikler Yaylası 2" style="width: 30%; border-radius: 6px;" />
-    </a>
-    <a href="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol3.jpg?raw=true" data-lightbox="melikler" data-title="Melikler Yaylası 3">
-      <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol3.jpg?raw=true" alt="Melikler Yaylası 3" style="width: 30%; border-radius: 6px;" />
-    </a>
-    <a href="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol4.jpg?raw=true" data-lightbox="melikler" data-title="Melikler Yaylası 4">
-      <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol4.jpg?raw=true" alt="Melikler Yaylası 3" style="width: 30%; border-radius: 6px;" />
-    </a>
-    <a href="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol5.jpg?raw=true" data-lightbox="melikler" data-title="Melikler Yaylası 5">
-      <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol5.jpg?raw=true" alt="Melikler Yaylası 3" style="width: 30%; border-radius: 6px;" />
-    </a>
-    <a href="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol6.jpg?raw=true" data-lightbox="melikler" data-title="Melikler Yaylası 6">
-      <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol6.jpg?raw=true" alt="Melikler Yaylası 3" style="width: 30%; border-radius: 6px;" />
-    </a>
+
+      <div class="slider-container">
+  <div class="slider">
+    <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol1.jpg?raw=true" alt="Melikler Yaylası 1" />
+    <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol2.jpg?raw=true" alt="Melikler Yaylası 2" />
+    <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol3.jpg?raw=true" alt="Melikler Yaylası 3" />
+    <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol4.jpg?raw=true" alt="Melikler Yaylası 4" />
+    <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol5.jpg?raw=true" alt="Melikler Yaylası 5" />
+    <img src="https://github.com/Bayraksea/yenishirehomecatalog/blob/main/dedegol6.jpg?raw=true" alt="Melikler Yaylası 6" />
   </div>
+</div>
+
+ 
 </section>
 
