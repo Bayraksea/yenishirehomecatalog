@@ -12,15 +12,16 @@
   <link rel="stylesheet" href="style.css" />
   <!-- JavaScript -->
   <script>
-    function openTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(t => t.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-    }
-    // Sayfa ilk yüklendiğinde giriş sekmesi aktif olsun
-  document.addEventListener("DOMContentLoaded", function () {
-    showTab('giris');
-  });
+   function openTab(tabId) {
+  const tabs = document.querySelectorAll('.tab-content');
+  tabs.forEach(t => t.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+}
+document.addEventListener("DOMContentLoaded", function () {
+  // Sayfa açıldığında 'giris' sekmesini aktif yap
+  openTab('giris');
+});
+
   </script>
   
   
@@ -48,6 +49,7 @@
   transition: transform 0.3s ease;
 }
 
+
 .slider img:hover {
   transform: scale(1.05);
 }
@@ -60,42 +62,43 @@
       padding: 0;
       background-color: #f2f2f2;
     }
-    .tab-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background-color: #2e7d32;
-    }
     .top-bar {
-  background-color: #2c3e50; /* koyu mavi/gri ton */
-  padding: 10px 0;
+  background-color: #2e7d32; /* yeşil ton */
+  padding: 15px 0;
   text-align: center;
   color: white;
 }
 
 .header-title {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: bold;
-  margin-bottom: 10px;
-  font-family: sans-serif;
+  margin-bottom: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .tab-buttons button {
-  background-color: #34495e; /* buton zemini */
-  color: white;
+  background-color: #388e3c; /* biraz daha açık yeşil */
   border: none;
-  padding: 10px 16px;
-  margin: 0 5px;
-  cursor: pointer;
+  color: white;
+  padding: 10px 18px;
   font-size: 16px;
-  font-family: sans-serif;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .tab-buttons button:hover {
-  background-color: #1abc9c; /* hover rengi */
+  background-color: #1abc9c;
 }
+
 
     .tab-content {
       display: none;
@@ -119,11 +122,8 @@
 </head>
 <body>
 
-  <div class="header-title">
-  YenishireHome
-</div>
-
-  <!-- Sekme Butonları -->
+ <div class="top-bar">
+  <div class="header-title">YenishireHome</div>
   <div class="tab-buttons">
     <button onclick="openTab('giris')">Giriş</button>
     <button onclick="openTab('rota1')">Rota 1</button>
@@ -131,6 +131,8 @@
     <button onclick="openTab('rota3')">Rota 3</button>
     <button onclick="openTab('rota4')">Rota 4</button>
   </div>
+</div>
+
 
   <!-- GİRİŞ Sekmesi -->
   <div id="giris" class="tab-content active">
