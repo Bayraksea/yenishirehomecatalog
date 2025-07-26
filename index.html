@@ -4,6 +4,15 @@
   <!-- Lightbox2 CSS ve JS -->
 <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox-plus-jquery.min.js"></script>
+  <!-- JavaScript -->
+  <script>
+    function openTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>YenishireHome Turizm Kataloğu</title>
@@ -223,14 +232,7 @@ Yenişarbademli ilçesinin 11 kilometre batısında yer alan bir mağaradır. İ
     <p>Türkiye’nin en güzel rafting parkurlarından biri olan Köprülü Kanyon’da su sporları yapabilir; çevresinde yer alan Selge Antik Kenti ve Tazı Kanyonu gibi tarihî ve doğal alanları keşfedebilirsiniz.</p>
   </div>
 
-  <!-- JavaScript -->
-  <script>
-    function openTab(tabId) {
-      const tabs = document.querySelectorAll('.tab-content');
-      tabs.forEach(t => t.classList.remove('active'));
-      document.getElementById(tabId).classList.add('active');
-    }
-  </script>
+  
 
 </body>
 </html>
