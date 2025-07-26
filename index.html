@@ -24,9 +24,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
   </script>
   
-  
+  .header-bar {
+  display: flex;
+  align-items: center;
+  background-color: #004d40;
+  color: white;
+  padding: 10px 20px;
+}
+
+.giris-btn {
+  margin-right: auto;
+  background-color: #00796b;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.site-title {
+  margin: 0 auto;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
 
   <style>
+
+
+    
 .slider-container {
   overflow-x: auto;
   white-space: nowrap;
@@ -122,16 +150,18 @@ document.addEventListener("DOMContentLoaded", function () {
 </head>
 <body>
 
- <div class="top-bar">
-  <div class="header-title">YenishireHome</div>
-  <div class="tab-buttons">
-    <button onclick="openTab('giris')">Giriş</button>
-    <button onclick="openTab('rota1')">Rota 1</button>
-    <button onclick="openTab('rota2')">Rota 2</button>
-    <button onclick="openTab('rota3')">Rota 3</button>
-    <button onclick="openTab('rota4')">Rota 4</button>
-  </div>
+ <div class="header-bar">
+  <button class="giris-btn" onclick="openTab('giris')">Giriş</button>
+  <h1 class="site-title">YenishireHome</h1>
 </div>
+
+<div class="tab-buttons">
+  <button onclick="openTab('rota1')">Rota 1</button>
+  <button onclick="openTab('rota2')">Rota 2</button>
+  <button onclick="openTab('rota3')">Rota 3</button>
+  <button onclick="openTab('rota4')">Rota 4</button>
+</div>
+
 
 
   <!-- GİRİŞ Sekmesi -->
