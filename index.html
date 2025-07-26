@@ -29,13 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
   .header-bar {
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: relative;
   background-color: #004d40;
-  color: white;
-  padding: 10px 20px;
+  padding: 10px 0;
 }
 
 .giris-btn {
-  margin-right: auto;
+  position: absolute;
+  left: 20px;
   background-color: #00796b;
   color: white;
   border: none;
@@ -45,12 +47,19 @@ document.addEventListener("DOMContentLoaded", function () {
   border-radius: 5px;
 }
 
+.site-title-wrapper {
+  text-align: center;
+  width: 100%;
+}
+
 .site-title {
-  margin: 0 auto;
+  margin: 0;
   font-size: 24px;
   font-weight: bold;
   font-family: Arial, sans-serif;
+  color: white;
 }
+
 
 
   
@@ -154,7 +163,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
  <div class="header-bar">
   <button class="giris-btn" onclick="openTab('giris')">Giriş</button>
-  <h1 class="site-title">YenishireHome</h1>
+  <div class="site-title-wrapper">
+    <h1 class="site-title">YenishireHome</h1>
+  </div>
 </div>
 
 <div class="tab-buttons">
