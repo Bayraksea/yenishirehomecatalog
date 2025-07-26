@@ -1,124 +1,85 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  
-
-
-
-<!-- Lightbox2 CSS ve JS -->
+  <!-- Lightbox2 CSS ve JS -->
 <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox-plus-jquery.min.js"></script>
-
-  
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>YenishireHome Turizm Kataloğu</title>
-
-
-
-  
   <style>
-
-.slider-container {
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  background: #f1f8e9;
-  padding: 10px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.slider {
-  display: flex;
-  gap: 10px;
-}
-
-.slider img {
-  height: 200px;
-  border-radius: 8px;
-  flex-shrink: 0;
-  transition: transform 0.3s;
-}
-
-.slider img:hover {
-  transform: scale(1.05);
-}
-
-    
-    header h1 {
-  font-family: inherit;
-  font-size: 2.5rem;
-  color: #e0c097; /* altın sarısı gibi */
-  text-shadow: 2px 2px 4px #000000;
-}
-
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.6rem; /* Mobilde başlığı küçült */
-    line-height: 1.2;
-    padding: 10px;
-  }
-}
-
-    
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: sans-serif;
       margin: 0;
-      background: #f2f2e9;
-      color: #2f2f2f;
+      padding: 0;
+      background-color: #f2f2f2;
     }
-    header {
-      background: linear-gradient(to right, #3e5e45, #6b4e3d);
+    .tab-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #2e7d32;
+    }
+    .tab-buttons button {
+      padding: 15px 25px;
+      margin: 5px;
+      background-color: #4caf50;
       color: white;
-      padding: 30px 20px;
-      text-align: center;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+    .tab-buttons button:hover {
+      background-color: #388e3c;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+      background-color: white;
+      border-radius: 8px;
+    }
+    .active {
+      display: block;
+    }
+    .route-title {
+      margin-top: 40px;
+      color: #2e7d32;
     }
     .container {
-      max-width: 960px;
-      margin: auto;
       padding: 20px;
-    }
-    h2.route-title {
-      border-bottom: 2px solid #6b4e3d;
-      color: #3e5e45;
-      padding-bottom: 5px;
-      margin-top: 40px;
-    }
-    p {
-      line-height: 1.6;
-    }
-    .intro {
-      background-color: #e6e1d3;
-      padding: 20px;
-      border-left: 5px solid #6b4e3d;
     }
   </style>
 </head>
 <body>
-  
 
-  <header>
-    <h1>🌍 YENİSHİREHOME TURİZM KATALOĞU</h1>
-  </header>
+  <!-- Sekme Butonları -->
+  <div class="tab-buttons">
+    <button onclick="openTab('giris')">Giriş</button>
+    <button onclick="openTab('rota1')">Rota 1</button>
+    <button onclick="openTab('rota2')">Rota 2</button>
+    <button onclick="openTab('rota3')">Rota 3</button>
+    <button onclick="openTab('rota4')">Rota 4</button>
+  </div>
 
-  <div class="container">
-    <div class="intro">
-      <p>Doğayla iç içe, sakin ve konforlu bir konaklama deneyimi sunan YenishireHome, sadece bir konut değil; aynı zamanda bölgenin zengin kültürel ve doğal mirasını keşfetmeniz için bir başlangıç noktasıdır.</p>
-      <p>Bu rehber, YenishireHome’un çevresinde yer alan; köklü tarihî yapılar, eşsiz doğa manzaraları, göller, kanyonlar, mağaralar ve yürüyüş rotaları hakkında bilgi sunarak, konaklamanızı daha anlamlı ve unutulmaz kılmayı amaçlamaktadır.</p>
-      <p>1 ila 1,5 saatlik sürüş mesafesinde, Selçuklu medeniyetinin izlerini taşıyan kervan yollarından, Toros Dağları'nın büyüleyici eteklerine; kristal berraklığındaki göllerden, saklı şelalelere kadar uzanan çok sayıda rota sizi bekliyor.</p>
-      <p>YenishireHome’da kalırken, sadece dinlenmeyecek; aynı zamanda bu eşsiz coğrafyanın tarihini, kültürünü ve doğasını keşfetme ayrıcalığına da sahip olacaksınız.</p>
-      <p>Seyahatinizi daha keyifli ve anlamlı kılmak adına, çevredeki doğal ve tarihî zenginlikleri keşfetmenize yardımcı olacak bazı güzergâh önerilerini aşağıda bulabilirsiniz:</p>
+  <!-- GİRİŞ Sekmesi -->
+  <div id="giris" class="tab-content active">
+    <div class="container">
+      <div class="intro">
+       <p>Doğayla iç içe, sakin ve konforlu bir konaklama deneyimi sunan YenishireHome, sadece bir konut değil; aynı zamanda bölgenin zengin kültürel ve doğal mirasını keşfetmeniz için bir başlangıç noktasıdır.</p>
+       <p>Bu rehber, YenishireHome’un çevresinde yer alan; köklü tarihî yapılar, eşsiz doğa manzaraları, göller, kanyonlar, mağaralar ve yürüyüş rotaları hakkında bilgi sunarak, konaklamanızı daha anlamlı ve unutulmaz kılmayı amaçlamaktadır.</p>
+       <p>1 ila 1,5 saatlik sürüş mesafesinde, Selçuklu medeniyetinin izlerini taşıyan kervan yollarından, Toros Dağları'nın büyüleyici eteklerine; kristal berraklığındaki göllerden, saklı şelalelere kadar uzanan çok sayıda rota sizi bekliyor.</p>
+       <p>YenishireHome’da kalırken, sadece dinlenmeyecek; aynı zamanda bu eşsiz coğrafyanın tarihini, kültürünü ve doğasını keşfetme ayrıcalığına da sahip olacaksınız.</p>
+       <p>Seyahatinizi daha keyifli ve anlamlı kılmak adına, çevredeki doğal ve tarihî zenginlikleri keşfetmenize yardımcı olacak bazı güzergâh önerilerini aşağıda bulabilirsiniz:</p>
     </div>
-
-    <h2 class="route-title">1. Rota: Melikler Yaylası – Aksu – Sagalassos</h2>
-    <p>YenishireHome’dan Isparta yönüne doğru ilerlediğinizde, yaklaşık 20 dakika içinde Melikler Yaylası’na ulaşabilirsiniz. Burada yer alan Pınargözü Mağarası, Türkiye’nin en uzun mağaralarından biridir. Aynı bölgede Karagöl, Yeşil Göl ve Dedegöl Dağı çevresinde yürüyüş ve zirve tırmanışları yapılabilmektedir.</p>
-    <p>Melikler Yaylası’ndan yaklaşık 20 dakika uzaklıktaki Yaka Kanyonu, doğa yürüyüşü ve kanyon geçişi için ideal bir parkurdur.</p>
-    <p>Isparta yönüne devam ettiğinizde, Aksu ilçe merkezine 10 dakikalık mesafede yer alan Zindan Mağarası ve daha ilerideki Başpınar Tabiat Parkı ziyaret edilebilecek diğer doğal güzelliklerdir.</p>
-    <p>Bu rotayı Eğirdir ilçesi üzerinden Kovada Gölü yönüne çevirerek sürdürdüğünüzde, sırasıyla Kasnak Meşesi Tabiatı Koruma Alanı, Kovada Gölü Milli Parkı ve Yazılı Kanyon Tabiat Parkı gibi eşsiz alanlarda doğa yürüyüşü yapabilirsiniz. Aynı güzergâhta bulunan Sagalassos Antik Kenti, bölgenin en etkileyici arkeolojik miraslarındandır.</p>
-
-
-    <h2 class="route-title">2. Rota: Kubadabad Sarayı – Kızıldağ – Psidia Antik Kenti</h2>
+          <h2 class="route-title">1. Rota: Melikler Yaylası – Aksu – Sagalassos</h2>
+     <p>YenishireHome’dan Isparta yönüne doğru ilerlediğinizde, yaklaşık 20 dakika içinde Melikler Yaylası’na ulaşabilirsiniz. Burada yer alan Pınargözü Mağarası, Türkiye’nin en uzun mağaralarından biridir. Aynı bölgede Karagöl, Yeşil Göl ve Dedegöl Dağı çevresinde yürüyüş ve zirve tırmanışları yapılabilmektedir.</p>
+     <p>Melikler Yaylası’ndan yaklaşık 20 dakika uzaklıktaki Yaka Kanyonu, doğa yürüyüşü ve kanyon geçişi için ideal bir parkurdur.</p>
+     <p>Isparta yönüne devam ettiğinizde, Aksu ilçe merkezine 10 dakikalık mesafede yer alan Zindan Mağarası ve daha ilerideki Başpınar Tabiat Parkı ziyaret edilebilecek diğer doğal güzelliklerdir.</p>
+     <p>Bu rotayı Eğirdir ilçesi üzerinden Kovada Gölü yönüne çevirerek sürdürdüğünüzde, sırasıyla Kasnak Meşesi Tabiatı Koruma Alanı, Kovada Gölü Milli Parkı ve Yazılı Kanyon Tabiat Parkı gibi eşsiz alanlarda doğa yürüyüşü yapabilirsiniz. Aynı güzergâhta bulunan Sagalassos Antik Kenti, bölgenin en etkileyici arkeolojik miraslarındandır.</p>
+             <h2 class="route-title">2. Rota: Kubadabad Sarayı – Kızıldağ – Psidia Antik Kenti</h2>
     <p>YenishireHome’dan Beyşehir Gölü kıyısı boyunca Şarkikaraağaç yönüne ilerlediğinizde, ilk olarak Kubadabad Sarayı’nı ziyaret edebilirsiniz. Anadolu Selçuklu mimarisinin önemli örneklerinden olan bu yapı, göl manzarasıyla büyüleyicidir.</p>
     <p>Daha sonra Şarkikaraağaç ilçe merkezine çok yakın konumdaki Kızıldağ Milli Parkı’nı gezebilir; sonrasında Yalvaç ilçesinde yer alan Psidia Antiokheia Antik Kenti’ni ziyaret edebilirsiniz.</p>
     
@@ -131,14 +92,13 @@
     <p>YenishireHome’dan Antalya yönüne ilerlediğinizde, ilk olarak Derebucak Çamlık Milli Parkı karşınıza çıkar. Devamında, geleneksel düğmeli evleriyle ünlü Ormana köyü ziyaret edilebilir.</p>
     <p>Bu güzergahta yer alan yaylalarda yılkı atlarını doğal ortamlarında gözlemleyebilirsiniz. Antalya’nın Serik ilçesinden ayrılan yol, sizi doğrudan Köprülü Kanyon Milli Parkı’nın bulunduğu Beşkonak’a ulaştırır.</p>
     <p>Türkiye’nin en güzel rafting parkurlarından biri olan Köprülü Kanyon’da su sporları yapabilir; çevresinde yer alan Selge Antik Kenti ve Tazı Kanyonu gibi tarihî ve doğal alanları keşfedebilirsiniz.</p>
-
+    </div>
   </div>
 
- 
-  
-  
-  
-  <section style="background-color: #e8f5e9; padding: 30px; border-radius: 12px; margin: 30px auto; max-width: 900px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+  <!-- ROTA 1 -->
+  <div id="rota1" class="tab-content">
+    <h2 class="route-title">1. Rota: Melikler Yaylası – Aksu – Sagalassos</h2>
+    <section style="background-color: #e8f5e9; padding: 30px; border-radius: 12px; margin: 30px auto; max-width: 900px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
   <h2 style="color: #2e7d32; font-family: 'Georgia', serif; text-align: center; font-size: 28px; margin-bottom: 20px;">
     🗺️ Rota 1: Dedegöl Dağı ve Çevresi
   </h2>
@@ -236,8 +196,58 @@ Yenişarbademli ilçesinin 11 kilometre batısında yer alan bir mağaradır. İ
     </a>
   </div>
 </div>
+ </section>
+
+  </div>
+
+  <!-- ROTA 2 -->
+  <div id="rota2" class="tab-content">
+    <h2 class="route-title">2. Rota: Kubadabad Sarayı – Kızıldağ – Psidia Antik Kenti</h2>
+    <p>YenishireHome’dan Beyşehir Gölü kıyısı boyunca Şarkikaraağaç yönüne ilerlediğinizde, ilk olarak Kubadabad Sarayı’nı ziyaret edebilirsiniz. Anadolu Selçuklu mimarisinin önemli örneklerinden olan bu yapı, göl manzarasıyla büyüleyicidir.</p>
+    <p>Daha sonra Şarkikaraağaç ilçe merkezine çok yakın konumdaki Kızıldağ Milli Parkı’nı gezebilir; sonrasında Yalvaç ilçesinde yer alan Psidia Antiokheia Antik Kenti’ni ziyaret edebilirsiniz.</p>
+  </div>
+
+  <!-- ROTA 3 -->
+  <div id="rota3" class="tab-content">
+    <h2 class="route-title">3. Rota: Leylekler Vadisi – Beyşehir – Eflatunpınar – Fasıllar</h2>
+    <p>Beyşehir yönüne ilerlerken yol üzerinde bulunan Yeşildağ Mahallesi’ndeki Leylekler Vadisi, göçmen leyleklerin doğal ortamlarında gözlemlenebileceği nadir yerlerdendir.</p>
+    <p>Beyşehir Gölü kıyısında bulunan Karaburun Plajı, Türkiye’nin en büyük tatlı su gölü olan Beyşehir Gölü’nde serinlemek isteyenler için ideal bir duraktır.</p>
+    <p>İlçe merkezine ulaştığınızda, Selçuklu eserlerini ve tarihi çarşıyı gezebilir, yöresel lezzetleri tadabilirsiniz. Merkeze yaklaşık 10 km mesafedeki Nilüfer Bahçesi’nde gölde kayık turu yapabilir; yaklaşık 10 km daha ileride Eflatunpınar Hitit Anıtı’nı, yine ilçe merkezine 20 km mesafede yer alan Fasıllar Hitit Anıtı’nı ziyaret edebilirsiniz.</p>
+  </div>
+
+  <!-- ROTA 4 -->
+  <div id="rota4" class="tab-content">
+    <h2 class="route-title">4. Rota: Çamlık Mağaraları – Ormana – Köprülü Kanyon</h2>
+    <p>YenishireHome’dan Antalya yönüne ilerlediğinizde, ilk olarak Derebucak Çamlık Milli Parkı karşınıza çıkar. Devamında, geleneksel düğmeli evleriyle ünlü Ormana köyü ziyaret edilebilir.</p>
+    <p>Bu güzergahta yer alan yaylalarda yılkı atlarını doğal ortamlarında gözlemleyebilirsiniz. Antalya’nın Serik ilçesinden ayrılan yol, sizi doğrudan Köprülü Kanyon Milli Parkı’nın bulunduğu Beşkonak’a ulaştırır.</p>
+    <p>Türkiye’nin en güzel rafting parkurlarından biri olan Köprülü Kanyon’da su sporları yapabilir; çevresinde yer alan Selge Antik Kenti ve Tazı Kanyonu gibi tarihî ve doğal alanları keşfedebilirsiniz.</p>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function openTab(tabId) {
+      const tabs = document.querySelectorAll('.tab-content');
+      tabs.forEach(t => t.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
+
+  
+
+
+
 
 
  
  
-</section>
+
+ 
+
+ 
+  
+  
+  
+  
