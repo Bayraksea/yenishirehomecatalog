@@ -17,6 +17,10 @@
       tabs.forEach(t => t.classList.remove('active'));
       document.getElementById(tabId).classList.add('active');
     }
+    // Sayfa ilk yüklendiğinde giriş sekmesi aktif olsun
+  document.addEventListener("DOMContentLoaded", function () {
+    showTab('giris');
+  });
   </script>
   
   
