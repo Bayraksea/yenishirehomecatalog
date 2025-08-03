@@ -24,6 +24,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   </script>
 
+  <script>
+  function switchLanguage(lang) {
+    const tr = document.querySelectorAll('.route-content-tr');
+    const en = document.querySelectorAll('.route-content-en');
+
+    if (lang === 'tr') {
+      tr.forEach(element => element.style.display = 'block');
+      en.forEach(element => element.style.display = 'none');
+    } else {
+      tr.forEach(element => element.style.display = 'none');
+      en.forEach(element => element.style.display = 'block');
+    }
+  }
+</script>
+
   <style>
   
   .header-bar {
@@ -157,6 +172,38 @@ document.addEventListener("DOMContentLoaded", function () {
     .container {
       padding: 20px;
     }
+  
+
+    .lang-buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding-right: 20px;
+  }
+
+  .lang-buttons button {
+    padding: 8px 15px;
+    background-color: #1d3557;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  .lang-buttons button:hover {
+    background-color: #a8dadc;
+    color: black;
+  }
+
+  .language-content {
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  
+  
   </style>
 </head>
 <body>
@@ -175,6 +222,11 @@ document.addEventListener("DOMContentLoaded", function () {
   <button onclick="openTab('rota4')">Rota 4</button>
 </div>
 
+  <!-- Dil Butonları -->
+<div class="lang-buttons">
+  <button onclick="switchLanguage('tr')">TR</button>
+  <button onclick="switchLanguage('en')">ENG</button>
+</div>
 
 
   <!-- GİRİŞ Sekmesi -->
@@ -1372,6 +1424,7 @@ Köprülü Kanyon Milli Parkı, barındırdığı doğal, tarihi ve kültürel z
   
   
   
+
 
 
 
