@@ -24,20 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   </script>
 
-  <script>
-  function switchLanguage(lang) {
-    const tr = document.querySelectorAll('.route-content-tr');
-    const en = document.querySelectorAll('.route-content-en');
-
-    if (lang === 'tr') {
-      tr.forEach(element => element.style.display = 'block');
-      en.forEach(element => element.style.display = 'none');
-    } else {
-      tr.forEach(element => element.style.display = 'none');
-      en.forEach(element => element.style.display = 'block');
-    }
-  }
-</script>
+  
 
   <style>
   
@@ -178,34 +165,44 @@ document.addEventListener("DOMContentLoaded", function () {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
-    padding-right: 20px;
+    margin-right: 20px;
   }
 
   .lang-buttons button {
-    padding: 8px 15px;
+    padding: 6px 12px;
+    margin-left: 6px;
     background-color: #1d3557;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-left: 5px;
   }
 
   .lang-buttons button:hover {
-    background-color: #a8dadc;
-    color: black;
+    background-color: #457b9d;
   }
 
-  .language-content {
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-  }
+  
   
   
   
   </style>
 </head>
+  
+  <script>
+  function switchLanguage(lang) {
+    const trElements = document.querySelectorAll('.route-content-tr');
+    const enElements = document.querySelectorAll('.route-content-en');
+
+    if (lang === 'tr') {
+      trElements.forEach(el => el.style.display = 'block');
+      enElements.forEach(el => el.style.display = 'none');
+    } else {
+      trElements.forEach(el => el.style.display = 'none');
+      enElements.forEach(el => el.style.display = 'block');
+    }
+  }
+</script>
 <body>
 
  <div class="header-bar">
@@ -230,7 +227,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   <!-- GİRİŞ Sekmesi -->
-  <div id="content-tr" class="language-content">
+  <div class="route-content-tr">
   <div id="giris" class="tab-content active">
     <div class="container">
       <div class="intro">
@@ -241,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
        <p>Seyahatinizi daha keyifli ve anlamlı kılmak adına, çevredeki doğal ve tarihî zenginlikleri keşfetmenize yardımcı olacak bazı güzergâh önerilerini aşağıda bulabilirsiniz:</p>
     </div>
       </div>
-    <div id="content-en" class="language-content" style="display: none;">
+    <div class="route-content-en" style="display: none;">
   <div id="main" class="tab-content active">
     <div class="container">
       <div class="intro">
@@ -253,14 +250,14 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
       </div>
     
-      <div id="content-tr" class="language-content">   
+      <div class="route-content-tr">   
       <h2 class="route-title">1. Rota: Melikler Yaylası – Aksu – Sagalassos</h2>
      <p>YenishireHome’dan Isparta yönüne doğru ilerlediğinizde, yaklaşık 20 dakika içinde Melikler Yaylası’na ulaşabilirsiniz. Burada yer alan Pınargözü Mağarası, Türkiye’nin en uzun mağaralarından biridir. Aynı bölgede Karagöl, Yeşil Göl ve Dedegöl Dağı çevresinde yürüyüş ve zirve tırmanışları yapılabilmektedir.</p>
      <p>Melikler Yaylası’ndan yaklaşık 20 dakika uzaklıktaki Yaka Kanyonu, doğa yürüyüşü ve kanyon geçişi için ideal bir parkurdur.</p>
      <p>Isparta yönüne devam ettiğinizde, Aksu ilçe merkezine 10 dakikalık mesafede yer alan Zindan Mağarası ve daha ilerideki Başpınar Tabiat Parkı ziyaret edilebilecek diğer doğal güzelliklerdir.</p>
      <p>Bu rotayı Eğirdir ilçesi üzerinden Kovada Gölü yönüne çevirerek sürdürdüğünüzde, sırasıyla Kasnak Meşesi Tabiatı Koruma Alanı, Kovada Gölü Milli Parkı ve Yazılı Kanyon Tabiat Parkı gibi eşsiz alanlarda doğa yürüyüşü yapabilirsiniz. Aynı güzergâhta bulunan Sagalassos Antik Kenti, bölgenin en etkileyici arkeolojik miraslarındandır.</p>
        </div> 
-      <div id="content-en" class="language-content" style="display: none;">   
+      <div class="route-content-en" style="display: none;">   
       <h2 class="route-title">1st Route: Melikler Plateau – Aksu – Sagalassos</h2>
      <p>From YenishireHome, heading toward Isparta, you will reach Melikler Plateau in about 20 minutes. Pınargözü Cave, one of Turkey’s longest caves, is located here. In the same area, hiking and summit ascents can be made around Karagöl, Yeşil Lake, and Mount Dedegöl.</p>
      <p>About 20 minutes from the plateau lies Yaka Canyon, a perfect route for hiking and canyoning.</p>
@@ -268,7 +265,8 @@ document.addEventListener("DOMContentLoaded", function () {
      <p>If you continue through Eğirdir toward Kovada Lake, you will find unique natural areas such as Kasnak Oak Nature Reserve, Kovada Lake National Park, and Yazılı Canyon Nature Park. Along the same route, Sagalassos Ancient City stands as one of the most impressive archaeological sites in the region.</p>
        </div>
       
-      <h2 class="route-title">2. Rota: Kubadabad Sarayı – Kızıldağ – Psidia Antik Kenti</h2>
+     
+    <h2 class="route-title">2. Rota: Kubadabad Sarayı – Kızıldağ – Psidia Antik Kenti</h2>
     <p>YenishireHome’dan Beyşehir Gölü kıyısı boyunca Şarkikaraağaç yönüne ilerlediğinizde, ilk olarak Kubadabad Sarayı’nı ziyaret edebilirsiniz. Anadolu Selçuklu mimarisinin önemli örneklerinden olan bu yapı, göl manzarasıyla büyüleyicidir.</p>
     <p>Daha sonra Şarkikaraağaç ilçe merkezine çok yakın konumdaki Kızıldağ Milli Parkı’nı gezebilir; sonrasında Yalvaç ilçesinde yer alan Psidia Antiokheia Antik Kenti’ni ziyaret edebilirsiniz.</p>
     
@@ -1452,6 +1450,7 @@ Köprülü Kanyon Milli Parkı, barındırdığı doğal, tarihi ve kültürel z
   
   
   
+
 
 
 
