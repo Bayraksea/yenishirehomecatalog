@@ -189,20 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
   </style>
 </head>
   
-  <script>
-  function switchLanguage(lang) {
-    const trElements = document.querySelectorAll('.route-content-tr');
-    const enElements = document.querySelectorAll('.route-content-en');
-
-    if (lang === 'tr') {
-      trElements.forEach(el => el.style.display = 'block');
-      enElements.forEach(el => el.style.display = 'none');
-    } else {
-      trElements.forEach(el => el.style.display = 'none');
-      enElements.forEach(el => el.style.display = 'block');
-    }
-  }
-</script>
+  
 <body>
 
  <div class="header-bar">
@@ -238,11 +225,35 @@ document.addEventListener("DOMContentLoaded", function () {
        <p>Seyahatinizi daha keyifli ve anlamlı kılmak adına, çevredeki doğal ve tarihî zenginlikleri keşfetmenize yardımcı olacak bazı güzergâh önerilerini aşağıda bulabilirsiniz:</p>
     </div>
       </div>
-    <div class="route-content-en" style="display: none;">
+    
+       
+      <h2 class="route-title">1. Rota: Melikler Yaylası – Aksu – Sagalassos</h2>
+     <p>YenishireHome’dan Isparta yönüne doğru ilerlediğinizde, yaklaşık 20 dakika içinde Melikler Yaylası’na ulaşabilirsiniz. Burada yer alan Pınargözü Mağarası, Türkiye’nin en uzun mağaralarından biridir. Aynı bölgede Karagöl, Yeşil Göl ve Dedegöl Dağı çevresinde yürüyüş ve zirve tırmanışları yapılabilmektedir.</p>
+     <p>Melikler Yaylası’ndan yaklaşık 20 dakika uzaklıktaki Yaka Kanyonu, doğa yürüyüşü ve kanyon geçişi için ideal bir parkurdur.</p>
+     <p>Isparta yönüne devam ettiğinizde, Aksu ilçe merkezine 10 dakikalık mesafede yer alan Zindan Mağarası ve daha ilerideki Başpınar Tabiat Parkı ziyaret edilebilecek diğer doğal güzelliklerdir.</p>
+     <p>Bu rotayı Eğirdir ilçesi üzerinden Kovada Gölü yönüne çevirerek sürdürdüğünüzde, sırasıyla Kasnak Meşesi Tabiatı Koruma Alanı, Kovada Gölü Milli Parkı ve Yazılı Kanyon Tabiat Parkı gibi eşsiz alanlarda doğa yürüyüşü yapabilirsiniz. Aynı güzergâhta bulunan Sagalassos Antik Kenti, bölgenin en etkileyici arkeolojik miraslarındandır.</p>
+    
+    <h2 class="route-title">2. Rota: Kubadabad Sarayı – Kızıldağ – Psidia Antik Kenti</h2>
+    <p>YenishireHome’dan Beyşehir Gölü kıyısı boyunca Şarkikaraağaç yönüne ilerlediğinizde, ilk olarak Kubadabad Sarayı’nı ziyaret edebilirsiniz. Anadolu Selçuklu mimarisinin önemli örneklerinden olan bu yapı, göl manzarasıyla büyüleyicidir.</p>
+    <p>Daha sonra Şarkikaraağaç ilçe merkezine çok yakın konumdaki Kızıldağ Milli Parkı’nı gezebilir; sonrasında Yalvaç ilçesinde yer alan Psidia Antiokheia Antik Kenti’ni ziyaret edebilirsiniz.</p>
+    
+    <h2 class="route-title">3. Rota: Leylekler Vadisi – Beyşehir – Eflatunpınar – Fasıllar</h2>
+    <p>Beyşehir yönüne ilerlerken yol üzerinde bulunan Yeşildağ Mahallesi’ndeki Leylekler Vadisi, göçmen leyleklerin doğal ortamlarında gözlemlenebileceği nadir yerlerdendir.</p>
+    <p>Beyşehir Gölü kıyısında bulunan Karaburun Plajı, Türkiye’nin en büyük tatlı su gölü olan Beyşehir Gölü’nde serinlemek isteyenler için ideal bir duraktır.</p>
+    <p>İlçe merkezine ulaştığınızda, Selçuklu eserlerini ve tarihi çarşıyı gezebilir, yöresel lezzetleri tadabilirsiniz. Merkeze yaklaşık 10 km mesafedeki Nilüfer Bahçesi’nde gölde kayık turu yapabilir; yaklaşık 10 km daha ileride Eflatunpınar Hitit Anıtı’nı, yine ilçe merkezine 20 km mesafede yer alan Fasıllar Hitit Anıtı’nı ziyaret edebilirsiniz.</p>
+    
+    <h2 class="route-title">4. Rota: Çamlık Mağaraları – Ormana – Köprülü Kanyon</h2>
+    <p>YenishireHome’dan Antalya yönüne ilerlediğinizde, ilk olarak Derebucak Çamlık Milli Parkı karşınıza çıkar. Devamında, geleneksel düğmeli evleriyle ünlü Ormana köyü ziyaret edilebilir.</p>
+    <p>Bu güzergahta yer alan yaylalarda yılkı atlarını doğal ortamlarında gözlemleyebilirsiniz. Antalya’nın Serik ilçesinden ayrılan yol, sizi doğrudan Köprülü Kanyon Milli Parkı’nın bulunduğu Beşkonak’a ulaştırır.</p>
+    <p>Türkiye’nin en güzel rafting parkurlarından biri olan Köprülü Kanyon’da su sporları yapabilir; çevresinde yer alan Selge Antik Kenti ve Tazı Kanyonu gibi tarihî ve doğal alanları keşfedebilirsiniz.</p>
+    </div>
+  </div>
+
+  <div class="route-content-en" style="display: none;">
   <div id="main" class="tab-content active">
     <div class="container">
       <div class="intro">
-       <p>YenishireHome offers a peaceful and comfortable stay intertwined with nature. It is not only a place to stay but also a perfect starting point for exploring the rich cultural and natural heritage of the region</p>
+       <p>YenishireHome offers a peaceful and comfortable stay intertwined with nature. It is not only a place to stay but also a perfect starting point for exploring the rich cultural and natural heritage of the region.</p>
        <p>This guide aims to enrich your stay by providing information on the historical landmarks, breathtaking natural landscapes, lakes, canyons, caves, and hiking trails located in the vicinity of YenishireHome.</p>
        <p>Within a 1 to 1.5-hour driving distance, you can find a wide array of routes—from Seljuk caravan roads to the mesmerizing foothills of the Taurus Mountains, from crystal-clear lakes to hidden waterfalls.</p>
        <p>While staying at YenishireHome, you won’t just rest; you’ll also enjoy the privilege of discovering the history, culture, and nature of this unique region.</p>
@@ -250,43 +261,35 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
       </div>
     
-      <div class="route-content-tr">   
+       
       <h2 class="route-title">1. Rota: Melikler Yaylası – Aksu – Sagalassos</h2>
      <p>YenishireHome’dan Isparta yönüne doğru ilerlediğinizde, yaklaşık 20 dakika içinde Melikler Yaylası’na ulaşabilirsiniz. Burada yer alan Pınargözü Mağarası, Türkiye’nin en uzun mağaralarından biridir. Aynı bölgede Karagöl, Yeşil Göl ve Dedegöl Dağı çevresinde yürüyüş ve zirve tırmanışları yapılabilmektedir.</p>
      <p>Melikler Yaylası’ndan yaklaşık 20 dakika uzaklıktaki Yaka Kanyonu, doğa yürüyüşü ve kanyon geçişi için ideal bir parkurdur.</p>
      <p>Isparta yönüne devam ettiğinizde, Aksu ilçe merkezine 10 dakikalık mesafede yer alan Zindan Mağarası ve daha ilerideki Başpınar Tabiat Parkı ziyaret edilebilecek diğer doğal güzelliklerdir.</p>
      <p>Bu rotayı Eğirdir ilçesi üzerinden Kovada Gölü yönüne çevirerek sürdürdüğünüzde, sırasıyla Kasnak Meşesi Tabiatı Koruma Alanı, Kovada Gölü Milli Parkı ve Yazılı Kanyon Tabiat Parkı gibi eşsiz alanlarda doğa yürüyüşü yapabilirsiniz. Aynı güzergâhta bulunan Sagalassos Antik Kenti, bölgenin en etkileyici arkeolojik miraslarındandır.</p>
-       </div> 
-      <div class="route-content-en" style="display: none;">   
-      <h2 class="route-title">1st Route: Melikler Plateau – Aksu – Sagalassos</h2>
-     <p>From YenishireHome, heading toward Isparta, you will reach Melikler Plateau in about 20 minutes. Pınargözü Cave, one of Turkey’s longest caves, is located here. In the same area, hiking and summit ascents can be made around Karagöl, Yeşil Lake, and Mount Dedegöl.</p>
-     <p>About 20 minutes from the plateau lies Yaka Canyon, a perfect route for hiking and canyoning.</p>
-     <p>Further along the Isparta route, you can visit Zindan Cave and Başpınar Nature Park, which are located near the Aksu district center.</p>
-     <p>If you continue through Eğirdir toward Kovada Lake, you will find unique natural areas such as Kasnak Oak Nature Reserve, Kovada Lake National Park, and Yazılı Canyon Nature Park. Along the same route, Sagalassos Ancient City stands as one of the most impressive archaeological sites in the region.</p>
-       </div>
-      
-     
+    
     <h2 class="route-title">2. Rota: Kubadabad Sarayı – Kızıldağ – Psidia Antik Kenti</h2>
     <p>YenishireHome’dan Beyşehir Gölü kıyısı boyunca Şarkikaraağaç yönüne ilerlediğinizde, ilk olarak Kubadabad Sarayı’nı ziyaret edebilirsiniz. Anadolu Selçuklu mimarisinin önemli örneklerinden olan bu yapı, göl manzarasıyla büyüleyicidir.</p>
     <p>Daha sonra Şarkikaraağaç ilçe merkezine çok yakın konumdaki Kızıldağ Milli Parkı’nı gezebilir; sonrasında Yalvaç ilçesinde yer alan Psidia Antiokheia Antik Kenti’ni ziyaret edebilirsiniz.</p>
     
-   
-      
-      <h2 class="route-title">3. Rota: Leylekler Vadisi – Beyşehir – Eflatunpınar – Fasıllar</h2>
+    <h2 class="route-title">3. Rota: Leylekler Vadisi – Beyşehir – Eflatunpınar – Fasıllar</h2>
     <p>Beyşehir yönüne ilerlerken yol üzerinde bulunan Yeşildağ Mahallesi’ndeki Leylekler Vadisi, göçmen leyleklerin doğal ortamlarında gözlemlenebileceği nadir yerlerdendir.</p>
     <p>Beyşehir Gölü kıyısında bulunan Karaburun Plajı, Türkiye’nin en büyük tatlı su gölü olan Beyşehir Gölü’nde serinlemek isteyenler için ideal bir duraktır.</p>
     <p>İlçe merkezine ulaştığınızda, Selçuklu eserlerini ve tarihi çarşıyı gezebilir, yöresel lezzetleri tadabilirsiniz. Merkeze yaklaşık 10 km mesafedeki Nilüfer Bahçesi’nde gölde kayık turu yapabilir; yaklaşık 10 km daha ileride Eflatunpınar Hitit Anıtı’nı, yine ilçe merkezine 20 km mesafede yer alan Fasıllar Hitit Anıtı’nı ziyaret edebilirsiniz.</p>
-
-   
-      
-      <h2 class="route-title">4. Rota: Çamlık Mağaraları – Ormana – Köprülü Kanyon</h2>
+    
+    <h2 class="route-title">4. Rota: Çamlık Mağaraları – Ormana – Köprülü Kanyon</h2>
     <p>YenishireHome’dan Antalya yönüne ilerlediğinizde, ilk olarak Derebucak Çamlık Milli Parkı karşınıza çıkar. Devamında, geleneksel düğmeli evleriyle ünlü Ormana köyü ziyaret edilebilir.</p>
     <p>Bu güzergahta yer alan yaylalarda yılkı atlarını doğal ortamlarında gözlemleyebilirsiniz. Antalya’nın Serik ilçesinden ayrılan yol, sizi doğrudan Köprülü Kanyon Milli Parkı’nın bulunduğu Beşkonak’a ulaştırır.</p>
     <p>Türkiye’nin en güzel rafting parkurlarından biri olan Köprülü Kanyon’da su sporları yapabilir; çevresinde yer alan Selge Antik Kenti ve Tazı Kanyonu gibi tarihî ve doğal alanları keşfedebilirsiniz.</p>
     </div>
   </div>
 
-  <!-- ROTA 1 -->
+  
+    
+
+
+    
+    <!-- ROTA 1 -->
   <div id="rota1" class="tab-content">
     <h2 class="route-title">1. Rota: Melikler Yaylası – Aksu – Sagalassos</h2>
     <section style="background-color: #e8f5e9; padding: 30px; border-radius: 12px; margin: 30px auto; max-width: 900px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
@@ -1430,7 +1433,24 @@ Köprülü Kanyon Milli Parkı, barındırdığı doğal, tarihi ve kültürel z
   </div>
 
   
+<script>
+  function switchLanguage(lang) {
+    const trElements = document.querySelectorAll('.route-content-tr');
+    const enElements = document.querySelectorAll('.route-content-en');
 
+    if (lang === 'tr') {
+      trElements.forEach(el => el.style.display = 'block');
+      enElements.forEach(el => el.style.display = 'none');
+    } else {
+      trElements.forEach(el => el.style.display = 'none');
+      enElements.forEach(el => el.style.display = 'block');
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    switchLanguage('tr'); // Sayfa açıldığında Türkçe içerik aktif
+  });
+</script>
 </body>
 </html>
 
@@ -1450,6 +1470,7 @@ Köprülü Kanyon Milli Parkı, barındırdığı doğal, tarihi ve kültürel z
   
   
   
+
 
 
 
